@@ -148,7 +148,6 @@
       itemSelected = [...oldItem, itemId];
     }
     setStorage('itemSelected', JSON.stringify(itemSelected));
-    dispatchCartInfo();
   }
 
   /**
@@ -185,7 +184,6 @@
       cartItem.skuQty += changeCount;
     }
     setStorage('cartGoods', JSON.stringify(cartGoods));
-    dispatchCartInfo();
   };
 
   /**
