@@ -140,7 +140,6 @@ export function dispatchCartItemSelect(itemId) {
     itemSelected = [...oldItem, itemId]
   }
   setStorage('itemSelected', JSON.stringify(itemSelected))
-  dispatchCartInfo()
 }
 
 /**
@@ -177,7 +176,6 @@ export const syncCartItemCount = ({
     cartItem.skuQty += changeCount
   }
   setStorage('cartGoods', JSON.stringify(cartGoods))
-  dispatchCartInfo()
 }
 
 /**
