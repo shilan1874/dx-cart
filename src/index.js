@@ -33,7 +33,7 @@ export function dispatchCartInfo() {
  */
 export const getCartList = () => {
   const data = getStorage('cartGoods')
-  const formattedData = formatCartGoods(JSON.parse(data))
+  const formattedData = formatCartGoods(JSON.parse(data || '[]'))
   return formattedData
 }
 function formatCartGoods(data) {
