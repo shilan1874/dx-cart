@@ -33,7 +33,7 @@ function dispatchCartInfo() {
  */
 const getCartList = () => {
   const data = getStorage('cartGoods');
-  const formattedData = formatCartGoods(JSON.parse(data));
+  const formattedData = formatCartGoods(JSON.parse(data || '[]'));
   return formattedData
 };
 function formatCartGoods(data) {
@@ -82,9 +82,7 @@ function formatCartGoods(data) {
     }
     shopItem.itemList[0].activityCommodityList.push(item);
   });
-  return {
-    cartList: shopItemList,
-  }
+  return shopItemList
 }
 
 /**

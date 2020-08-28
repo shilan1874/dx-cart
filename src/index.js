@@ -82,9 +82,7 @@ function formatCartGoods(data) {
     }
     shopItem.itemList[0].activityCommodityList.push(item)
   })
-  return {
-    cartList: shopItemList,
-  }
+  return shopItemList
 }
 
 /**
