@@ -1,0 +1,19 @@
+{
+  "name": "dx-cart",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "author": "li",
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rimraf dist",
+    "publish": "yarn clean && yarn build"
+  },
+  "dependencies": {
+    "number-precision": "^1.5.0",
+    "rollup": "^2.26.6"
+  }
+}
